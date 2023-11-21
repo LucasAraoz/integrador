@@ -53,3 +53,13 @@ button {
     border: none;
     cursor: pointer;
 }
+
+.logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo-container img {
+    max-width: 150px; /* Adjust the size as needed */
+    height: auto;
+}
