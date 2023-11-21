@@ -2,48 +2,22 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ... (existing head content) ... -->
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <!-- Add a link to your logo -->
+    <link rel="icon" type="image/png" href="/images/logo.png">
     <title>Book Shop</title>
 </head>
 <body>
 
+    <!-- Add your logo at the top of the page -->
+    <div class="logo-container">
+        <img src="/images/logo.png" alt="Logo">
+    </div>
+
     <h1>Book List</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Thymeleaf syntax for iterating over books -->
-            <tr th:each="book : ${books}">
-                <td th:text="${book.id}"></td>
-                <td th:text="${book.title}"></td>
-                <td th:text="${book.author}"></td>
-                <td th:text="${book.price}"></td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>Add Book</h2>
-    <form action="/addBook" method="post" th:object="${newBook}">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" th:field="*{title}" required>
-        <br>
-        <label for="author">Author:</label>
-        <input type="text" id="author" name="author" th:field="*{author}" required>
-        <br>
-        <label for="price">Price:</label>
-        <input type="number" id="price" name="price" th:field="*{price}" required>
-        <br>
-        <button type="submit">Add Book</button>
-    </form>
+    <!-- ... (existing content) ... -->
 
 </body>
 </html>
