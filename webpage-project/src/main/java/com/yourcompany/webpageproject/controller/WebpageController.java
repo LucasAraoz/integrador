@@ -20,8 +20,8 @@ public class WebpageController {
     public String showBooks(Model model) {
         List<Book> allBooks = bookRepository.findAll();
         model.addAttribute("books", allBooks);
-        model.addAttribute("newBook", new Book()); // for the form
-        return "book-list"; // assuming your HTML file is named book-list.html
+        model.addAttribute("newBook", new Book()); 
+        return "book-list"; 
     }
 
     @PostMapping("/addBook")
